@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario cadastrado</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 24px;
+            text-align: left;
+            color: #333;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <caption>Usuários Cadastrados</caption>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Mensagem</th>
+            </tr>
+            {% for pessoas in cadastrar %}
+            <tr>
+                <td>{{pessoas.nome}}</td>
+                <td>{{pessoas.email}}</td>
+                <td>{{pessoas.telefone}}</td>
+                <td>{{pessoas.mensagem}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
